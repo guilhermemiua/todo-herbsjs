@@ -2,10 +2,10 @@ module.exports = {
   development: {
     client: 'postgresql',
     connection: {
-      database: 'herbs-project',
-      user: 'postgres',
-      password: 'postgres',
-      host: 'localhost',
+      database: 'todo',
+      user: 'user',
+      password: '123456',
+      host: 'todo-pg',
       port: 5432,
     },
     pool: {

@@ -9,7 +9,7 @@ async function start(config) {
   await graphql(app, config);
 
   return app.listen({ port: config.api.port }, () =>
-    console.log(`🚀 Server UP and 🌪️ Spinning on port ${config.api.port}`)
+    console.log(`🚀 Server is UP and 🌪️ Spinning on port ${config.api.port}`)
   );
 }
 

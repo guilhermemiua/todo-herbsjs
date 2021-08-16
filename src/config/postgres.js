@@ -4,9 +4,10 @@ require('dotenv').config();
 module.exports = {
   client: 'pg',
   connection: {
-    host: '127.0.0.1',
-    user: 'postgres',
-    password: 'postgres',
-    database: 'todolist_on_herbs_db',
+    host: env.get('PG_HOST'),
+    user: env.get('PG_USER'),
+    password: env.get('PG_PASSWORD'),
+    database: env.get('PG_DATABASE'),
+    port: env.get('PG_PORT'),
   },
 };

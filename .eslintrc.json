@@ -2,7 +2,8 @@
   "env": {
     "commonjs": true,
     "es2021": true,
-    "node": true
+    "node": true,
+    "jest": true
   },
   "extends": [
     "airbnb-base",
@@ -14,6 +15,7 @@
   },
   "rules": {
     "prettier/prettier": "error",
-    "global-require": "off"
+    "global-require": "off",
+    "radix": "off"
   }
 }

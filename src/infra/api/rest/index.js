@@ -28,7 +28,7 @@ async function prepareRoutes(config) {
           repositories
         ),
       },
-      update: {
+      put: {
         usecase: require('../../../domain/usecases/user/updateUser')(
           repositories
         ),
@@ -38,8 +38,16 @@ async function prepareRoutes(config) {
           repositories
         ),
       },
-      get: {
+      getById: {
         usecase: require('../../../domain/usecases/user/findOneUser')(
+          repositories
+        ),
+      },
+    },
+    {
+      name: 'todos',
+      post: {
+        usecase: require('../../../domain/usecases/todo/createTodo')(
           repositories
         ),
       },
@@ -60,6 +68,7 @@ module.exports = async (app, config) => {
   generateRoutes(routes, router, verbose);
   app.use(router);
 
+  // Preparing Use Cases for documentation
   const ucs = await prepareUsecases(usecases);
 
   const shelf = renderShelfHTML(ucs);

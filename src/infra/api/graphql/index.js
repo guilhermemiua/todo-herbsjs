@@ -26,7 +26,7 @@ async function generateSchema(config) {
 
   const graphQLDef = [].concat(
     types,
-    inputs,
+    [],
     queries.factory(UCqueries),
     mutations.factory(UCmutations)
   );

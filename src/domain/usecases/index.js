@@ -15,4 +15,8 @@ module.exports = [
     usecase: require('./user/findOneUser'),
     tags: { group: 'Users', type: 'query' },
   },
+  {
+    usecase: require('./todo/createTodo'),
+    tags: { group: 'Todos', type: 'mutation' },
+  },
 ];

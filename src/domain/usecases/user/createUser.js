@@ -1,6 +1,6 @@
 const { usecase, step, Ok } = require('@herbsjs/herbs');
 const { User } = require('../../entities');
-const { UserNotValidError } = require('../../errors');
+const { NotValidError } = require('../../errors');
 
 const useCase =
   ({ userRepository }) =>
@@ -24,7 +24,7 @@ const useCase =
         ctx.user = User.fromJSON(ctx.req);
 
         if (!ctx.user.isValid())
-          return UserNotValidError(
+          return NotValidError(
             'User ',
             'The User entity is invalid',
             ctx.user.errors
